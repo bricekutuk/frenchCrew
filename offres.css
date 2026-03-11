@@ -5,6 +5,7 @@
 
 :root {
   --main-font: "Arial";
+  --color: black;
 }
 html,
 body {
@@ -14,8 +15,11 @@ body {
 }
 
 body {
-  background-color: #f5f0e8;
-  color: black;
+  background-image: url("background-offer.png"); /* image à la racine */
+  background-size: cover; /* remplit tout l'écran */
+  background-position: center; /* centre l'image */
+  background-repeat: no-repeat; /* pas de répétition */
+  background-attachment: fixed; /* effet parallaxe si tu scrolles */
   font-family: var(--main-font);
   line-height: 1.7;
   min-height: 100vh;
@@ -39,18 +43,19 @@ footer {
   font-size: 1rem;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
-  color: darkblue;
+  color: white;
   margin-bottom: 1rem;
 }
 
 .hero h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1rem;
+  color: antiquewhite;
 }
 
 .hero p {
   margin: 0 auto;
-  color: grey;
+  color: antiquewhite;
   font-size: 1rem;
   max-width: 500px;
 }
@@ -58,17 +63,16 @@ footer {
 /* Mise en page des cards */
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 2rem 10rem;
+  display: flex;
+  gap: 20px; /* Espace entre les cartes */
+  flex-wrap: wrap; /* Passe à la ligne si l'écran est trop petit */
+  justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .card {
-  background-color: darkblue;
-  border: 1px solid white;
+  background-color: white;
+  border: 2px solid darkblue;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -81,28 +85,22 @@ footer {
   width: 250px;
 }
 
-.card-number {
-  font-size: 1rem;
-  color: white;
-  text-transform: uppercase;
-}
-
 .card-offer {
   font-family: var(--main-font);
   font-size: 2rem;
-  color: white;
+  color: darkblue;
 }
 
 .card-prix {
   font-family: var(--main-font);
   font-size: 1rem;
-  color: white;
+  color: var(--color);
   padding-bottom: 2rem;
 }
 .card-prix strong {
   font-family: var(--main-font);
   font-size: 2rem;
-  color: white;
+  color: var(--color);
 }
 
 .card-prestation {
@@ -110,17 +108,79 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  color: white;
+  color: var(--color);
   flex-grow: 1;
   font-size: 1rem;
 }
 
 .card-villes {
   color: white;
+  background-color: darkblue;
   font-size: 0.9rem;
   letter-spacing: 0.15;
   text-transform: upperCase;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  display: inline-block; /* Pour que le rectangle épouse le texte */
+  padding: 6px 12px; /* Espace autour du texte */
+  border: 1px solid darkblue; /* Couleur et épaisseur du contour */
+  border-radius: 4px; /* Bords légèrement arrondis */
+  cursor: pointer; /* Pour montrer que c'est cliquable */
+  transition:
+    background 0.2s,
+    color 0.2s; /* Petite animation au hover */
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* pour hériter de la couleur parent */
+}
+
+.card-villes:hover {
+  background-color: rgb(67, 67, 234); /* Fond au survol */
+  color: #fff; /* Texte devient blanc */
+}
+
+/* Ligne dorée en haut — apparaît au hover et quand active */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--or);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.card:hover::before,
+.card.active::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card.active {
+  border-color: var(--or-clair);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- BADGE POPULAIRE ---- */
+.card-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: gold; /* fond doré */
+  color: white; /* texte blanc */
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px; /* coins légèrement arrondis */
 }
