@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <link rel="stylesheet" href="panier.css">
+</head>
+<nav>
+
+</nav>
+<body>
+    <main class="payment-container">
+
+    <h1>Paiement de votre réservation</h1>
+    <p>Veuillez vérifier les informations et procéder au paiement.</p>
+    <section class="booking-summary">
+  <h2>Résumé du séjour</h2>
+
+  <div class="summary-box">
+    <p><strong>Nombre de personnes :</strong> <span id="recapPersonnes"></span></p>
+    <p><strong>Date d'arrivée :</strong> <span id="recapCheckin"></span></p>
+    <p><strong>Date de départ :</strong> <span id="recapCheckout"></span></p>
+    <p><strong>Offre choisie :</strong> <span id="recapOffre"></span></p>
+  </div>
+    </section>
+    <section class="client-info">
+
+      <h2>Informations client</h2>
+
+      <form>
+
+        <div>
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div>
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone">
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- Paiement -->
+    <section class="payment-method">
+
+      <h2>Méthode de paiement</h2>
+
+      <form>
+
+        <div>
+          <input type="radio" name="payment" id="card" checked>
+          <label for="card">Carte bancaire</label>
+        </div>
+
+        <div>
+          <input type="radio" name="payment" id="paypal">
+          <label for="paypal">PayPal</label>
+        </div>
+
+        <div>
+          <input type="radio" name="payment" id="applepay">
+          <label for="applepay">Apple Pay</label>
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- Bouton paiement -->
+    <div class="pay-button">
+      <button type="submit">Payer maintenant</button>
+    </div>
+
+  </main>
+</body>
+<footer>
+
+</footer>
+</html>
