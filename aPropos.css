@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.apropos,
+.reseau {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* titre */
+.Section {
+    margin-bottom: 10px;
+}
+
+.titre {
+    text-align: start;
+    margin: 50px 0;
+}
+
+.titre h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+/* sous-titre */
+.Section2 {
+    margin-bottom: 30px;
+}
+
+.soustitre {
+    margin: 0;
+    text-align: start;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+/* texte */
+.Section3 {
+    margin-bottom: 160px;
+    padding: 0 20px 0 0;
+}
+
+.Para {
+    margin: 0 0 22px 0;
+    text-align: start;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.Para:last-child {
+    margin-bottom: 0;
+}
+
+/* zone du bas */
+.bas-page {
+    max-width: 1450px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* colonne gauche */
+.Section4 {
+    width: 25%;
+}
+
+.equipe {
+    margin-top: 0;
+    margin-bottom: 110px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    justify-items: center;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* colonne droite */
+.Section5 {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    align-items: flex-end;
+}
+
+.loc,
+.entreprise {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loc img,
+.entreprise img {
+    width: 80%;
+    max-width: 1150px;
+    height: 370px;
+    object-fit: cover;
+    display: block;
+    border-radius: 22px;
+    transition: transform 0.35s ease;
+}
+
+.loc img:hover,
+.entreprise img:hover {
+    transform: scale(1.08);
+}
+
+/* réseaux */
+.reseau {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.reseau a {
+    display: inline-block;
+    margin: 10px 18px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.reseau i {
+    color: #0b1f4d;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.reseau a:hover {
+    text-decoration: underline;
+}
