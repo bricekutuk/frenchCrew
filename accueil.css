@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 1px solid #f00;
+                                          &:hover 
+    					  outline: 2px solid #f00;
+}
+
+body {
+    background-color:#EEF1F5 ;
+}
+
+#Menu {
+display: flex;
+align-items: center;
+justify-content: space-between;
+list-style: none;
+height: 100%;
+}
+
+#onglet {
+    display: flex;
+    list-style: none;
+    gap: 3em;
+    margin: 1em;
+
+}
+
+.logo1 {
+    width: 10em;
+}
+
+#nav {
+background-image: url(/images/stras.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+width: 100%;
+}
+
+#lesOffres {
+    padding-bottom: 0%
+}
