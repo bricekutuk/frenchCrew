@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-font: "Arial";
+}
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #f5f0e8;
+  color: black;
+  font-family: var(--main-font);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+header,
+footer {
+  border: 2px solid orange;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+.hero-welcome {
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: darkblue;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin: 0 auto;
+  color: grey;
+  font-size: 1rem;
+  max-width: 500px;
+}
+
+/* Mise en page des cards */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 10rem;
+}
+
+.card {
+  background-color: darkblue;
+  border: 1px solid white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  gap: 5rem;
+  padding: 3rem 2.5rem;
+  min-height: 400px;
+  width: 250px;
+}
+
+.card-number {
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.card-offer {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  color: white;
+}
+
+.card-prix {
+  font-family: var(--main-font);
+  font-size: 1rem;
+  color: white;
+  padding-bottom: 2rem;
+}
+.card-prix strong {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  color: white;
+}
+
+.card-prestation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: white;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.card-villes {
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.15;
+  text-transform: upperCase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
