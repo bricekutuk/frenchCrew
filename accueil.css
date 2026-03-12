@@ -13,7 +13,7 @@ align-items: center;
 justify-content: space-between;
 list-style: none;
 height: 100%;
-padding-bottom: 50em;
+
 }
 
 #Menu.scrolled {
@@ -201,7 +201,4 @@ padding-bottom: 50em;
     padding-right: 1%;
     font-size: 2em;
     margin-top: 30vh;
-}
-
-img {
 }
