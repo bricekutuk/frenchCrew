@@ -1,4 +1,5 @@
 body {
+    background: #f6f8fb;
     margin: 0;
     font-family: Arial;
 }
@@ -11,6 +12,9 @@ nav {
     background: white;
     font-size: large;
     border-bottom: 2px solid #776e6e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
 }
 
@@ -34,21 +38,21 @@ nav a {
     background-color: #271b4c;
     color: white;
     padding: 10px 18px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
 }
 
 h1 {
     color: rgb(14, 14, 82);
     text-align: center;
-    padding: 60px 20px;
+    padding: 10px 10px;
     font-size: 50px;
 }
 
 .hero {
     color: #2e0b51;
     text-align: center;
-
+    padding: 30px;
 }
 
 button {
@@ -60,15 +64,28 @@ button {
 }
 
 .partners {
-    padding: 81px 10%;
+    padding: 60px 10%;
 }
 
 .partner-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
     margin-bottom: 60px;
+
+    padding: 30px;
+    border: 1px solid #ccc8c8;
+    border-radius: 12px;
+    background: white;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partner-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 .partner-row.reverse .partner-text {
@@ -91,22 +108,26 @@ button {
 }
 
 .partner-text h2 {
-    font-size: 32px;
-    margin: 15px ;
+    font-size: 35px;
+    margin: 25px;
 }
 
 .partner-text p {
-    color: #666;
+    margin: 2rem;
+    color: #231d34;
     line-height: 1.6;
 }
 
-h2 {
-    font-size: 28px;
-    margin: 15px 0;
+span {
+    color: #271b4c;
+    margin-bottom: 10px;
+    display: inline-block;
 }
+
 
 .card {
     text-align: center;
+    margin: 60px 0;
 }
 
 .footer {
