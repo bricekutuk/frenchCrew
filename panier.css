@@ -1,0 +1,140 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #f4f7fb, #e8edf5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER PRINCIPAL */
+.payment-container {
+  width: 520px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* TITRES */
+.payment-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.payment-container > p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* BOXES */
+.summary-box,
+.client-info form,
+.payment-method form {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e4e8ee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.summary-box{
+    padding-top: 30px;
+}
+
+.payment-method form {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* LIGNES DU RECAP */
+.summary-box p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* VALEURS */
+.summary-box span {
+  font-weight: bold;
+  color: #2a6df4;
+}
+
+/* FORMULAIRE */
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* LABEL */
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* INPUTS */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #1447ad;
+  outline: none;
+  box-shadow: 0 0 5px rgba(42,109,244,0.3);
+}
+
+/* RADIO */
+.payment-method div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* BOUTON */
+.pay-button {
+  text-align: center;
+}
+
+.pay-button button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #06235c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.pay-button button:hover {
+  background: #195adb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
