@@ -1,6 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -8,9 +10,6 @@ body {
 }
 
 #Menu {
-display: flex;
-align-items: center;
-justify-content: space-between;
 list-style: none;
 height: 100%;
 font-size: 2em;
@@ -20,12 +19,25 @@ font-size: 2em;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
+#nav .menu-hamburger {
+    right: 35px;
+    width: 35px;
+}
+
+nav a {
+color: white;
+}
+
 #nav {
             position: fixed;
             top: 0; left: 0; right: 0;
             height: var(--nav-h);
             z-index: 100;
             transition: background var(--transition), box-shadow var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
         }
         #nav.scrolled {
             background: rgba(26,35,64,.96);
@@ -33,16 +45,8 @@ font-size: 2em;
             backdrop-filter: blur(10px);
         }
 
-        #Menu {
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 32px;
-        }
-
         .logo1 {
+            font-size: 2em;
             height: 3em;
             filter: brightness(0) invert(1);
             transition: opacity .2s;
@@ -232,4 +236,3 @@ font-size: 2em;
     font-size: 2em;
     margin-top: 30vh;
 }
-

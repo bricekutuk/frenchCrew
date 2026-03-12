@@ -10,14 +10,15 @@
 </head>
 <body>
     <nav id="nav">
+        <img src="/images/logo1.png" alt="logo" class="logo1">
         <div id="Menu">
-            <img src="/images/logo1.png" alt="logo" class="logo1">
             <ul id="onglet">
-                <li>a propos</li>
-                <li>galerie</li>
-                <li>partenaire</li>
+                <li><a href="#">a propos</a></li>
+                <li><a href="#">galerie</a></li>
+                <li><a href="#">partenaire</a></li>
             </ul>
         </div>
+        <img src="/images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
     </nav>
     <section id="hero">
         <div id="lesOffres">
@@ -111,15 +112,8 @@
             <div>Partenaire</div>
         </section>
     </footer>
-    <script>
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('nav');
-        if (window.scrollY > 10) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-    });
+    <script src="java.js">
+   
 </script>
 </body>
 </html>
