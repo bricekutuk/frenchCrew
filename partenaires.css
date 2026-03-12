@@ -1,7 +1,7 @@
 body {
-    background: #f6f8fb;
+    background: #e3e5e9;
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 nav {
@@ -9,13 +9,20 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 8%;
-    background: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+
     font-size: large;
-    border-bottom: 2px solid #776e6e;
+    border-bottom: 1px solid #c0bbbb;
     position: sticky;
     top: 0;
     z-index: 1000;
 
+}
+
+.nav-logo {
+    height: 75px;
+    width: auto;
 }
 
 nav a {
@@ -35,16 +42,28 @@ nav a {
 }
 
 .btn {
-    background-color: #271b4c;
+    background-color: #4d2ea9;
     color: white;
     padding: 10px 18px;
     border-radius: 10px;
     text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 h1 {
     color: rgb(14, 14, 82);
     text-align: center;
+    margin: 1rem;
     padding: 10px 10px;
     font-size: 50px;
 }
@@ -55,28 +74,16 @@ h1 {
     padding: 30px;
 }
 
-button {
-    background-color: #271b4c;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.partners {
-    padding: 60px 10%;
-}
-
 .partner-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 50px;
-    margin-bottom: 60px;
+    margin: 30px auto;
 
     padding: 30px;
-    border: 1px solid #ccc8c8;
-    border-radius: 12px;
+    border: 1px solid #949191;
+    border-radius: 20px;
     background: white;
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -119,9 +126,11 @@ button {
 }
 
 span {
+    font-size: large;
     color: #271b4c;
     margin-bottom: 10px;
-    display: inline-block;
+    display: flex;
+    padding: 2rem;
 }
 
 
@@ -178,8 +187,70 @@ span {
 
 .footer-bottom {
     margin-top: 30px;
-    padding-top: 20px;
+    padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
     font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .partner-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .partner-row.reverse .partner-text {
+        order: 0;
+    }
+
+    .partner-row.reverse .partner-image {
+        order: 0;
+    }
+
+    .partner-image {
+        height: 220px;
+    }
+
+    .partner-text h2 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .partner-text p {
+        margin: 10px;
+    }
+
+    .span {
+        padding: 10px;
+    }
+
+    .card {
+        margin: 30px 5%;
+    }
+
+    .footer {
+        padding: 30px 5%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
 }
