@@ -138,11 +138,6 @@ footer {
   color: var(--second-color);
 }
 
-.card:hover::before,
-.card.active::before {
-  transform: scaleX(1);
-}
-
 .card-badge {
   position: absolute;
   top: 1.5rem;
