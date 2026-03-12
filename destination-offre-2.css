@@ -3,9 +3,10 @@
     padding: 0;
 }
 body {
-    background: linear-gradient(135deg, #2f4069, #4e70aa);
-  font-family: 'Poppins', sans-serif;
-
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background-attachment: fixed;
+    background-size: cover;
+   font-family: 'Poppins', sans-serif;
 }
 main{
     margin: 30px;
@@ -23,6 +24,7 @@ main{
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 5px  20px rgba(0, 0, 0, 0.119);
+    
 }
     
 .card:hover{
@@ -31,42 +33,34 @@ main{
 }
 .card1{
     display:grid;
-     background: #5276b4;;
+    background: linear-gradient(135deg, #0f172a, #243249);
 }
 
 .card2{
     display:grid;
-     background: #5276b4;;
-    
-
+   background: linear-gradient(135deg, #0f172a, #243249);
 }
-
+    
 .card3{
     display:grid;
 
-     background: #5276b4;;
+  background: linear-gradient(135deg, #0f172a, #243249);
     
-
 }
-
 .card4{
     display:grid;
-     background: #5276b4;;
-    
-
+ background: linear-gradient(135deg, #0f172a, #243249);
 }
 
 .card5{
     display:grid;
-     background: #5276b4;;
-
+background: linear-gradient(135deg, #0f172a, #243249);
 }
+
 
 .card6{
     display:grid;
-    background: #5276b4;
-    
-
+background: linear-gradient(135deg, #0f172a, #243249);
 }
 
 .card img{
@@ -79,12 +73,12 @@ a{
     color: black;
 }
 h3{
-    color: rgba(255, 255, 255, 0.716);
+    color: rgba(255, 255, 255, 0.679);
     padding-left: 30px;
     font-size: 25px; 
 }
 h2{
-    color: rgba(255, 255, 255, 0.812);
+    color:rgba(255, 255, 255, 0.61);
     text-align: center;
     font-size: 50px;
     align-items: center;
@@ -93,20 +87,20 @@ h2{
 
 .text{
     padding: 0px 30px 5px 30px ;
-    color: rgba(255, 255, 255, 0.878);
+     color: rgba(192, 186, 186, 0.763);
     font-size: 14px;
 }
 
 p{
     padding-left: 30px;
-    color: rgba(255, 255, 255, 0.878);
+    color: rgba(192, 186, 186, 0.763);
     font-size: 15px;
 }h5{
-    color: rgba(255, 255, 255, 0.716);
+    color: rgba(255, 255, 255, 0.679);
     padding: 0px 0px 10px 30px;
 }
 .footer {
-    background: #4f6ea4;
+   background: linear-gradient(135deg, #141f37, #243249);
     color: white;
     padding: 50px 10%;
 }

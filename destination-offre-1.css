@@ -3,9 +3,8 @@
     padding: 0;
 }
 body {
-    background: linear-gradient(135deg, #2f4069, #4e70aa);
+    background: linear-gradient(135deg, #1e2a47, #30466b);
   font-family: 'Poppins', sans-serif;
-
 }
 main{
     margin: 30px;
@@ -31,12 +30,12 @@ main{
 }
 .card1{
     display:grid;
-     background: #5276b4;;
+    background: linear-gradient(135deg, #2f4067, #2b3d5a);
 }
 
 .card2{
     display:grid;
-     background: #5276b4;;
+   background: linear-gradient(135deg, #2f4067, #2b3d5a);
     
 
 }
@@ -44,28 +43,26 @@ main{
 .card3{
     display:grid;
 
-     background: #5276b4;;
+   background: linear-gradient(135deg, #2f4067, #2b3d5a);
     
 
 }
 
 .card4{
     display:grid;
-     background: #5276b4;;
-    
+    background: linear-gradient(135deg, #2f4067, #2b3d5a);
 
 }
 
 .card5{
     display:grid;
-     background: #5276b4;;
+    background: linear-gradient(135deg, #2f4067, #2b3d5a);
 
 }
 
 .card6{
     display:grid;
-    background: #5276b4;
-    
+    background: linear-gradient(135deg, #2f4067, #2b3d5a);
 
 }
 
@@ -79,12 +76,12 @@ a{
     color: black;
 }
 h3{
-    color: rgba(255, 255, 255, 0.716);
+    color: rgba(255, 255, 255, 0.655);
     padding-left: 30px;
     font-size: 25px; 
 }
 h2{
-    color: rgba(255, 255, 255, 0.812);
+    color: rgba(255, 255, 255, 0.655);
     text-align: center;
     font-size: 50px;
     align-items: center;
@@ -93,20 +90,20 @@ h2{
 
 .text{
     padding: 0px 30px 5px 30px ;
-    color: rgba(255, 255, 255, 0.878);
+    color: rgb(157, 156, 156);
     font-size: 14px;
 }
 
 p{
     padding-left: 30px;
-    color: rgba(255, 255, 255, 0.878);
+    color: rgb(157, 156, 156);
     font-size: 15px;
 }h5{
-    color: rgba(255, 255, 255, 0.716);
+    color: rgba(255, 255, 255, 0.655);
     padding: 0px 0px 10px 30px;
 }
 .footer {
-    background: #4f6ea4;
+    background: linear-gradient(135deg, #2f4067, #2b3d5a);
     color: white;
     padding: 50px 10%;
 }
@@ -158,6 +155,7 @@ p{
     text-align: center;
     font-size: 14px;
 }
+
 
 @media screen and (max-width: 768px){
 
