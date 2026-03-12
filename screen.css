@@ -1,0 +1,30 @@
+@media (max-width: 560px) {
+            :root { --nav-h: 60px; }
+
+            #block { grid-template-columns: 1fr; gap: 20px; }
+
+            .card-img-wrap { height: 180px; }
+
+            main { padding: 48px 16px 32px; }
+
+            .titreH2 { margin-bottom: 36px; }
+
+            #footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 28px 16px;
+            }
+
+            #lesOffres p { font-size: 1.5rem; }
+            #lesOffres div { padding: 12px 28px; font-size: .88rem; }
+        }
+
+        @media (max-width: 900px) {
+            #block { grid-template-columns: repeat(2, 1fr); }
+            #onglet { display: none; }
+            #hamburger { display: flex; }
+            #Menu { padding: 0 20px; }
+            main { padding: 60px 20px 40px; }
+        }
+
