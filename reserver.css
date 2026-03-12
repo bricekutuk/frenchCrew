@@ -1,0 +1,86 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4e9f2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.reservation {
+  background: white;
+  padding: 40px;
+  width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* TITRE */
+.reservation h1 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.reservation p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* GROUPES */
+form div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* INPUT + SELECT */
+input,
+select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+/* FOCUS */
+input:focus,
+select:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74,144,226,0.3);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 20px;
+  background: #04274e;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
