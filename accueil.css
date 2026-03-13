@@ -9,11 +9,13 @@ body {
     background-color:#EEF1F5 ;
 }
 
-#Menu {
-list-style: none;
+#Menu{
+    list-style: none;
 height: 100%;
 font-size: 2em;
 }
+
+
 
 #Menu.scrolled {
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -22,10 +24,21 @@ font-size: 2em;
 #nav .menu-hamburger {
     right: 35px;
     width: 35px;
+    display: none;
+}
+
+#nav .menu-hamburger:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
 }
 
 nav a {
 color: white;
+}
+
+#nav #Menu ul li:hover{
+     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
 }
 
 #nav {
@@ -220,19 +233,56 @@ color: white;
     margin-top: 0.3rem;
 }
 
-#footer {
-    background-color: #2F80ED;
+.footer {
+    background: linear-gradient(135deg, #062343, #1e6ab3);
+    color: white;
+    padding: 50px 10%;
 }
 
-.logoFooter {
-    width: 5%;
-}
-
-#footer {
+.footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-right: 1%;
-    font-size: 2em;
-    margin-top: 30vh;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 14px;
 }

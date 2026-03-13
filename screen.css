@@ -2,12 +2,26 @@
 
     #nav{
         padding: 0;
+           position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-h);
+            z-index: 100;
+            transition: background var(--transition), box-shadow var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
     }
+
+    #nav.scrolled {
+            background: rgba(26,35,64,.96);
+            box-shadow: 0 2px 20px rgba(0,0,0,.25);
+            backdrop-filter: blur(10px);
+        }
 
     #nav .menu-hamburger {
         display: block;
         position: absolute;
-        top: 50px;
         width: 3em;
     }
 
@@ -22,7 +36,7 @@
        display: flex;
        justify-content: center;
        align-items: center;
-       margin-left: -100%;
+       margin-left: -110%;
        transition: all 0.5s ease;
     }
 
@@ -30,20 +44,38 @@
     margin-left: 0;
 }
 
-    #Menu ul {
+    #Menu #onglet ul {
        display: flex;
        flex-direction: column;
        align-items: center;
     }
 
-    #nav #Menu ul li{
+    #nav #Menu #onglet ul li{
         margin: 25px 0 ;
         font-size: 1.2em;
     }
 
     #nav .logo1 {
    position: absolute;
-   top: 50px;
    left: 50px;
+   top: -15px;
+}
+
+#block {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 60px;
+}
+
+.card-img-wrap {
+    height: 270px;
+}
+
+#onglet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 }
