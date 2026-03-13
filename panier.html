@@ -11,78 +11,120 @@
 </nav>
 <body>
     <main class="payment-container">
-
-    <h1>Paiement de votre réservation</h1>
-    <p>Veuillez vérifier les informations et procéder au paiement.</p>
-    <section class="booking-summary">
-  <h2>Résumé du séjour</h2>
-
-  <div class="summary-box">
-    <p><strong>Nombre de personnes :</strong> <span id="recapPersonnes"></span></p>
-    <p><strong>Date d'arrivée :</strong> <span id="recapCheckin"></span></p>
-    <p><strong>Date de départ :</strong> <span id="recapCheckout"></span></p>
-    <p><strong>Offre choisie :</strong> <span id="recapOffre"></span></p>
-  </div>
-    </section>
-    <section class="client-info">
-
-      <h2>Informations client</h2>
-
-      <form>
-
-        <div>
-          <label for="name">Nom complet</label>
-          <input type="text" id="name" required>
+      <h1>Paiement de votre réservation</h1>
+      <p>Veuillez vérifier les informations et procéder au paiement.</p>
+      <section class="booking-summary">
+        <h2>Résumé du séjour</h2>
+        <div class="summary-box">
+          <p><strong>Nombre de personnes :</strong> <span id="recapGuests"></span></p>
+          <p><strong>Date d'arrivée :</strong> <span id="recapCheckIn"></span></p>
+          <p><strong>Date de départ :</strong> <span id="recapCheckOut"></span></p>
+          <p><strong>Offre choisie :</strong> <span id="recapOffre"></span></p>
+          <p><strong>Total :</strong> <span id="recapTotal"></span></p>
         </div>
+      </section>
+      <section class="client-info">
+        <h2>Informations client</h2>
+        <form>
+          <div>
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div>
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone">
+          </div>
+        </form>
+      </section>
+          <!-- Paiement -->
+      <section class="payment-method">
+        <h2>Méthode de paiement</h2>
+        <form>
+          <div>
+            <input type="radio" name="payment" id="card" onclick="showPaymentForm()">
+            <label for="card">Carte bancaire</label>
+          </div>
+          <div>
+            <input type="radio" name="payment" id="paypal" onclick="showPaymentForm()">
+            <label for="paypal">PayPal</label>
+          </div>
+          <div>
+            <input type="radio" name="payment" id="applepay" onclick="showPaymentForm()">
+            <label for="applepay">Apple Pay</label>
+          </div>
+        </form>
+      </section>
+          <div id="cardForm">
+            <h3>Paiement par carte</h3>
+            <input type="text" placeholder="Numéro de carte">
+            <input type="text" placeholder="Date d'expiration">
+            <input type="text" placeholder="CVV">
+          </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
-        </div>
+          <div id="paypalForm">
+            <h3>Connexion PayPal</h3>
+            <input type="email" placeholder="Email PayPal">
+            <input type="password" placeholder="Mot de passe">
+          </div>
 
-        <div>
-          <label for="phone">Téléphone</label>
-          <input type="tel" id="phone">
-        </div>
-
-      </form>
-
-    </section>
-
-    <!-- Paiement -->
-    <section class="payment-method">
-
-      <h2>Méthode de paiement</h2>
-
-      <form>
-
-        <div>
-          <input type="radio" name="payment" id="card" checked>
-          <label for="card">Carte bancaire</label>
-        </div>
-
-        <div>
-          <input type="radio" name="payment" id="paypal">
-          <label for="paypal">PayPal</label>
-        </div>
-
-        <div>
-          <input type="radio" name="payment" id="applepay">
-          <label for="applepay">Apple Pay</label>
-        </div>
-
-      </form>
-
-    </section>
-
-    <!-- Bouton paiement -->
-    <div class="pay-button">
-      <button type="submit">Payer maintenant</button>
-    </div>
-
+          <div id="appleForm">
+            <h3>Paiement Apple Pay</h3>
+            <p>Confirmez avec votre appareil Apple.</p>
+          </div>
+          <!-- Bouton paiement -->
+      <div class="pay-button">
+        <button type="submit">Payer maintenant</button>
+      </div>
   </main>
-</body>
-<footer>
+  <script>
+    let offer = localStorage.getItem("offer");
+    let guests= localStorage.getItem("guests");
+    let checkIn = localStorage.getItem("checkIn");
+    let checkOut = localStorage.getItem("checkOut");
+    let total = localStorage.getItem("total");
 
-</footer>
+    document.getElementById("recapOffre").innerText = offer;
+    document.getElementById("recapCheckIn").innerText = checkIn;
+    document.getElementById("recapCheckOut").innerText = checkOut;
+    document.getElementById("recapGuests").innerText = guests;
+    document.getElementById("recapTotal").innerText = total + " € ";
+  </script>
+  <script src="reserver.js"></script>
+  <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Séjours en France</h3>
+                <p>Découvrez les plus belles destinations françaises avec nos séjours tout compris.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Nos offres</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Galerie</a></li>
+                    <li><a href="#">Partenaires</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📞 +33 1 23 45 67 89</p>
+                <p>✉️ contact@frenchcrew.fr</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 French Crew. Tous droits réservés.
+        </div>
+
+    </footer>
+</body>
 </html>

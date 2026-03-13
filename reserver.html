@@ -42,21 +42,52 @@
           <label for="offer">Choix de l’offre :</label>
           <select id="offer" name="offer" required>
             <option value="">-- Choisir une offre --</option>
-            <option value="basic">Basique</option>
-            <option value="medium">Medium</option>
-            <option value="premium">Premium</option>
+            <option value="Standard">Standard</option>
+            <option value="Confort">Confort</option>
+            <option value="Premium">Premium</option>
           </select>
         </div>
 
         <div>
-          <a href="paiement.html" class="btn">Réserver et Payer</a>
+          <a href="panier.html" class="btn" onclick="sendData()">Réserver et Payer</a>
         </div>
 
       </form>
     </section>
   </main>
-</body>
-<footer>
+  <footer class="footer">
+        <div class="footer-container">
 
-</footer>
+            <div class="footer-col">
+                <h3>Séjours en France</h3>
+                <p>Découvrez les plus belles destinations françaises avec nos séjours tout compris.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Nos offres</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Galerie</a></li>
+                    <li><a href="#">Partenaires</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📞 +33 1 23 45 67 89</p>
+                <p>✉️ contact@frenchcrew.fr</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 French Crew. Tous droits réservés.
+        </div>
+
+    </footer>
+</body>
+<script src="reserver.js"></script>
+
 </html>

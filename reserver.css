@@ -13,6 +13,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+main { 
+  margin: 150px;
 }
 
 /* CONTAINER */
@@ -83,4 +87,59 @@ select:focus {
   background: #357abd;
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+.footer {
+    background: linear-gradient(135deg, #062343, #1e6ab3);
+    color: white;
+    padding: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 14px;
 }
