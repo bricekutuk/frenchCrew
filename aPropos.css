@@ -1,4 +1,5 @@
 * {
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -7,14 +8,87 @@ body {
     padding: 30px 20px;
     background-color: white;
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+/*nav*/
+
+/* nav */
+#Menu {
+    list-style: none;
+    height: 100%;
+    font-size: 2em;
+}
+
+#Menu.scrolled {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+#nav .menu-hamburger {
+    right: 35px;
+    width: 35px;
+    display: none;
+}
+
+#nav .menu-hamburger:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#nav #Menu ul li:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+#nav {
+    width: calc(100% + 40px);
+    margin: -30px 0 60px -20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #062343, #1e6ab3);
+}
+
+#nav.scrolled {
+    background: rgba(26, 35, 64, 0.96);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+    
+}
+
+.logo1 {
+    font-size: 2em;
+    height: 2.3em;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.2s;
+}
+
+.logo1:hover {
+    opacity: 0.85;
+}
+
+#onglet {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    align-items: center;
 }
 
 /* bloc haut */
+h1 {
+    max-width: 1200px;
+    margin: 0 auto 70px auto;
+    text-align: start;
+    font-size: 38px;}
+
 .apropos {
     max-width: 1200px;
     margin: 0 auto 50px auto;
-    background-color: #0b1f4d;
+    background-color: DarkBlue;
     color: white;
     border-radius: 24px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
@@ -24,16 +98,6 @@ body {
 /* titre */
 .Section {
     margin-bottom: 10px;
-}
-
-.titre {
-    text-align: start;
-    margin: 0 0 30px 0;
-}
-
-.titre h1 {
-    margin: 0;
-    font-size: 38px;
 }
 
 /* sous-titre */
@@ -78,7 +142,7 @@ body {
 .Section4 {
     width: 320px;
     min-width: 320px;
-    background-color: #0b1f4d;
+    background-color: DarkBlue;
     color: white;
     border-radius: 17px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
@@ -118,7 +182,7 @@ body {
 /* colonne droite */
 .Section5 {
     flex: 1;
-    background-color: #0b1f4d;
+    background-color: DarkBlue;
     color: white;
     border-radius: 17px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
@@ -155,7 +219,7 @@ body {
 .reseau {
     width: calc(100% + 40px);
     margin-left: -20px;
-    background-color: #0b1f4d;
+    background: linear-gradient(135deg, #062343, #1e6ab3);
     color: white;
     padding: 24px;
     text-align: center;
@@ -182,7 +246,7 @@ body {
 .footer {
     width: calc(100% + 40px);
     margin: 0 0 -30px -20px;
-    background-color: #0b1f4d;
+   background: linear-gradient(135deg, #062343, #1e6ab3);
     color: white;
     padding: 35px 30px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
