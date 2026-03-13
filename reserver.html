@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver</title>
+    <link rel="stylesheet" href="reserver.css">
+</head>
+<nav>
+
+</nav>
+<body>
+  <main>
+    <section class="reservation">
+      <h1>Réserver votre séjour</h1>
+      <p>Choisissez le nombre de personnes, les dates et l’offre souhaitée.</p>
+
+      <form action="#" method="post">
+        
+        <div>
+          <label for="guests">Nombre de personnes :</label>
+          <select id="guests" name="guests" required>
+            <option value="">-- Choisir --</option>
+            <option value="1">1 personne</option>
+            <option value="2">2 personnes</option>
+            <option value="3">3 personnes</option>
+            <option value="4">4 personnes</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="checkin">Date d'arrivée :</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+
+        <div>
+          <label for="checkout">Date de départ :</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+
+        <div>
+          <label for="offer">Choix de l’offre :</label>
+          <select id="offer" name="offer" required>
+            <option value="">-- Choisir une offre --</option>
+            <option value="Standard">Standard</option>
+            <option value="Confort">Confort</option>
+            <option value="Premium">Premium</option>
+          </select>
+        </div>
+
+        <div>
+          <a href="panier.html" class="btn" onclick="sendData()">Réserver et Payer</a>
+        </div>
+
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Séjours en France</h3>
+                <p>Découvrez les plus belles destinations françaises avec nos séjours tout compris.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Nos offres</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Galerie</a></li>
+                    <li><a href="#">Partenaires</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📞 +33 1 23 45 67 89</p>
+                <p>✉️ contact@frenchcrew.fr</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 French Crew. Tous droits réservés.
+        </div>
+
+    </footer>
+</body>
+<script src="reserver.js"></script>
+
+</html>

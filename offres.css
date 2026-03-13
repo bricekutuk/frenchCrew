@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-font: "Arial";
+  --main-color: darkblue;
+  --second-color: white;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: url("background-offer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: var(--main-font);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+header,
+footer {
+  border: 2px solid orange;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+.hero-welcome {
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--second-color);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  color: antiquewhite;
+}
+
+.hero p {
+  margin: 0 auto;
+  color: antiquewhite;
+  font-size: 1rem;
+  max-width: 500px;
+}
+
+/* Mise en page des cards */
+
+.card-container {
+  display: flex;
+  gap: 20px; /* Espace entre les cartes */
+  flex-wrap: wrap; /* Passe à la ligne si l'écran est trop petit */
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.card {
+  background-color: var(--second-color);
+  border: 2px solid var(--main-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  gap: 5rem;
+  padding: 3rem 2.5rem;
+  min-height: 400px;
+  width: 250px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-offer {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.card-prix {
+  font-family: var(--main-font);
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+.card-prix strong {
+  font-family: var(--main-font);
+  font-size: 2rem;
+}
+
+.card-prestation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.card-villes {
+  color: var(--second-color);
+  background-color: var(--main-color);
+  font-size: 0.9rem;
+  letter-spacing: 0.15;
+  text-transform: upperCase;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 6px 12px;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card-villes:hover {
+  background-color: rgb(67, 67, 234);
+  color: var(--second-color);
+}
+
+.card-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: gold;
+  color: var(--second-color);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+}
