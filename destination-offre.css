@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    background: linear-gradient(135deg, #2f4069, #4e70aa);
+    background: #4e70aa;
   font-family: 'Roboto', sans-serif;
 
 }
@@ -11,6 +11,7 @@ body {
     list-style: none;
 height: 100%;
 font-size: 2em;
+
 }
 
 
@@ -44,6 +45,7 @@ color: white;
             align-items: center;
             justify-content: space-between;
             padding: 30px;
+            background: linear-gradient(135deg, #2f4069, #4e70aa);
         }
         #nav.scrolled {
             background: rgba(26,35,64,.96);
@@ -167,7 +169,7 @@ p{
     padding: 0px 0px 10px 30px;
 }
 .footer {
-    background: #4f6ea4;
+    background: linear-gradient(135deg, #2f4069, #4e70aa);
     color: white;
     padding: 50px 10%;
 }

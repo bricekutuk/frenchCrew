@@ -93,6 +93,7 @@ nav a {
   list-style: none;
   display: flex;
   gap: 2em;
+  font-size: 25px;
 }
 
 .hero {
@@ -154,7 +155,7 @@ nav a {
 .card-offer {
   font-family: var(--main-font);
   font-size: 2rem;
-  color: var(--main-color);
+  color: linear-gradient(135deg, #062343, #1e6ab3);
 }
 
 .card-prix {
@@ -178,7 +179,7 @@ nav a {
 
 .card-villes {
   color: var(--second-color);
-  background-color: var(--main-color);
+  background: linear-gradient(135deg, #062343, #1e6ab3);
   font-size: 0.9rem;
   letter-spacing: 0.15;
   text-transform: upperCase;

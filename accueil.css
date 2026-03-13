@@ -11,10 +11,13 @@ body {
 
 #Menu{
     list-style: none;
-height: 100%;
-font-size: 2em;
+    height: 100%;
+    font-size: 2em;
 }
 
+a {
+    font-size: 25px;
+}
 
 
 #Menu.scrolled {
@@ -93,6 +96,7 @@ color: white;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: flex-start;
+    margin: 30px
         }
         #lesOffres p {
             font-size: clamp(1.6rem, 5vw, 2.8rem);
@@ -102,7 +106,7 @@ color: white;
             text-shadow: 0 2px 12px rgba(0,0,0,.4);
             letter-spacing: .01em;
         }
-        #lesOffres div {
+        #lesOffres a {
             display: inline-block;
             background: var(--gold);
             color: var(--navy);
