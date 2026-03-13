@@ -68,7 +68,7 @@ body {
 /* bloc du bas */
 .bas-page {
     max-width: 1350px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 80px auto;
     display: flex;
     gap: 40px;
     align-items: stretch;
