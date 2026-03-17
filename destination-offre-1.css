@@ -9,7 +9,7 @@ body {
 #Menu{
     list-style: none;
 height: 100%;
-font-size: 15px;
+font-size: 20px;
 }
 
 
@@ -42,7 +42,7 @@ text-decoration: none;
 }
     
 body>*:not(#nav):not(main):not(#offer-menu){
-    margin-top: var(--nav-h, 100px);
+    margin-top: var(--nav-h, 150px);
 }
 
 #nav {
@@ -74,13 +74,11 @@ body>*:not(#nav):not(main):not(#offer-menu){
      display: flex;
      gap: 2em;
 }
-/* Titre */
+
 #offer-title{
   cursor:pointer;
   text-align:center;
-  color:#062343;
-  font-size:36px;
-  margin-bottom: 20px;
+  font-size:50px;
   transition: color 0.3s, transform 0.3s;
 }
 
@@ -89,10 +87,15 @@ body>*:not(#nav):not(main):not(#offer-menu){
   transform: scale(1.05);
 }
 
+.flex{
+  display: flex;
+  gap: 0px 20px;
+   
+  
+}
 #offer-menu{
   display: flex;
-  flex-direction: column; 
-  align-items: center;
+  gap: 0px 20px;
 }
 
 #offer-menu.hidden{
@@ -103,12 +106,10 @@ body>*:not(#nav):not(main):not(#offer-menu){
     background-color: #062343;
     padding: 10px;
     border-radius: 10px;
-  font-size:30px;
-  font-weight: bold;
-  margin: 3px 0;
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s, transform 0.3s;
+    font-size:36px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
 }
 
 #offer-menu .button:hover{
@@ -116,9 +117,8 @@ body>*:not(#nav):not(main):not(#offer-menu){
   transform: scale(1.05);
 }
 
-
 main{
-    margin: 30px;
+    margin: 10px 30px 30px 30px;
 }
 .cards{
     display: grid;
@@ -156,31 +156,33 @@ a{
 .destination-name{
     color:black;
     padding-left: 30px;
-    font-size: 25px; 
+    font-size: 35px; 
 }
 
 h2{
+    display: flex;
     color:black;
-    text-align: center;
-    font-size: 50px;
-    align-items: center;
+    text-align: left;
+    padding: 0px 0px 0px 60px;
+    font-size: 36px;
+    align-items: left;
 }
 
 .text{
     padding: 10px 30px 10px 30px ;
     color:#5f6c7b;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .destination{
     padding: 10px 0px 5px 30px;
     color:#1e6ab3;
     font-weight:500;
-    font-size: 13px;
+    font-size: 15px;
 }
 h5{
     color:#1e6ab3;
-    font-size:15px;
+    font-size:18px;
     font-weight:700;
     text-align: right;
     padding: 0px 30px 10px 0px;
@@ -251,6 +253,7 @@ h5{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     } #nav{
         padding: 0;
            position: fixed;
@@ -300,10 +303,43 @@ h5{
     justify-content: center;
 }
 #nav a{
-    color: ;
+    color:#062343 ;
 }
 
-    
+body>*:not(#nav):not(main):not(#offer-menu){
+    margin-top: var(--nav-h, 80px);
+}
+
+#offer-title{
+  font-size:26px;
+  margin-bottom: 10px;
+}
+
+#offer-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+#offer-menu .button{
+    padding: 10px;
+  font-size:15px;
+  font-weight: bold;
+  margin: 4px 0;
+
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+h2{
+    display: inline;
+    text-align: center;
+    padding:0px;
+}
+
+   
 }
 
 

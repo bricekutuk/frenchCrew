@@ -9,5 +9,5 @@ const offerTitle = document.getElementById('offer-title');
 const offerMenu = document.getElementById('offer-menu');
 
 offerTitle.addEventListener('click', ()=>{
-    offerMenu.classList.toggle('hidden'); // affiche/masque les liens
+    offerMenu.classList.toggle('hidden');
 });

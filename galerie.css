@@ -44,7 +44,7 @@ text-decoration: none;
 }
     
 body>*:not(#nav) {
-    margin-top: var(--nav-h, 110px);
+    margin-top: var(--nav-h, 150px);
 }
 
 #nav {
@@ -79,12 +79,13 @@ body>*:not(#nav) {
 
 
 h1{
-    font-size: 40px;
-    text-align: center;
+    font-size: 50px;
+    text-align: left;
+    padding-left: 40px;
   font-family: 'Poppins', sans-serif;
 }
 section{
-    margin: 30px;
+    margin: 10px 30px 30px 30px;
 }
 
 .cards{
@@ -243,9 +244,13 @@ section{
     font-size: 14px;
 }
 @media (max-width: 900px){
+    
     h1{ font-size: 45px; }
     .cards{
         grid-template-columns: repeat(2,1fr);
+    }
+    .card1{
+        display:none;
     }
     .card2, .card7, .card10{ grid-column: span 2; grid-row: span 1; }
     .card4, .card11, .card12{ grid-row: span 1; }
@@ -300,6 +305,17 @@ section{
 }
 #nav a{
     color: ;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+    padding-left:0px;
+}
+section{
+    margin-top: 30px;
+}
+body>*:not(#nav) {
+    margin-top: var(--nav-h, 100px);
 }
 
 
