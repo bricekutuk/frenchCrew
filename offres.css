@@ -30,7 +30,7 @@ header {
 #Menu {
   list-style: none;
   height: 100%;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #Menu.scrolled {
