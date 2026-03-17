@@ -11,19 +11,16 @@
 
 body {
   font-family: var(--main-font);
-}
-
-main {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: var(--main-font);
-  line-height: 1.7;
   min-height: 100vh;
 }
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7;
 }
 
 header {
@@ -56,13 +53,13 @@ nav a {
   text-decoration: none;
 }
 
-#nav #Menu ul li:hover {
+#Menu li:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transform: translateY(-4px);
 }
 
 body > *:not(#nav) {
-  margin-top: var(--nav-h, 100px);
+  margin-top: var(--nav-h, 50px);
 }
 
 #nav {
@@ -82,11 +79,11 @@ body > *:not(#nav) {
   background: linear-gradient(135deg, #062343, #1e6ab3);
 }
 
-/* #nav.scrolled {
+#nav.scrolled {
   background: rgba(26, 35, 64, 0.96);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
-} */
+}
 
 .logo1 {
   font-size: 2em;
@@ -107,7 +104,7 @@ body > *:not(#nav) {
 
 .hero {
   text-align: center;
-  padding: 5rem 2rem 3rem;
+  padding: 1rem 2rem 1rem;
 }
 
 .hero-welcome {
@@ -115,12 +112,10 @@ body > *:not(#nav) {
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   color: var(--second-color);
-  margin-bottom: 1rem;
 }
 
 .hero h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 1rem;
   color: var(--main-color);
 }
 
@@ -162,18 +157,14 @@ body > *:not(#nav) {
 }
 
 .card-offer {
-  font-family: var(--main-font);
   font-size: 2rem;
-  color: linear-gradient(135deg, #062343, #1e6ab3);
 }
 
 .card-prix {
-  font-family: var(--main-font);
   font-size: 1rem;
   padding-bottom: 2rem;
 }
 .card-prix strong {
-  font-family: var(--main-font);
   font-size: 2rem;
 }
 
@@ -196,15 +187,26 @@ body > *:not(#nav) {
   align-items: center;
   gap: 1rem;
   padding: 6px 12px;
+  margin-top: 1rem;
   border: 1px solid var(--main-color);
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite; /* effet pulse continu */
 }
 
 .card-villes:hover {
   background-color: rgb(67, 67, 234);
   color: var(--second-color);
+}
+
+.card-villes:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.07);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: none; /* stoppe le pulse au hover pour que hover prenne le dessus */
 }
 
 .card-badge {
@@ -275,6 +277,57 @@ body > *:not(#nav) {
   font-size: 14px;
 }
 
+.offer-switcher {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.offer-card {
+  width: 320px;
+  background: white;
+  border: 2px solid var(--main-color);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.offer-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.6rem;
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  font-weight: 600;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #062343, #1e6ab3);
+  color: white;
+}
+
+/* Animation pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(67, 67, 234, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(67, 67, 234, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(67, 67, 234, 0.4);
+  }
+}
+
 @media screen and (max-width: 900px) {
   #nav {
     padding: 0;
@@ -322,6 +375,7 @@ body > *:not(#nav) {
     left: 50px;
     top: -10px;
   }
+
   #onglet {
     display: flex;
     flex-direction: column;
@@ -330,5 +384,8 @@ body > *:not(#nav) {
   }
   #nav a {
     color: #062343;
+  }
+  .hero {
+    padding-top: 0.5rem;
   }
 }
