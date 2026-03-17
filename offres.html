@@ -18,9 +18,9 @@
         /></a>
         <div id="Menu">
           <ul id="onglet">
-            <li><a href="aPropos.html">a propos</a></li>
-            <li><a href="galerie.html">galerie</a></li>
-            <li><a href="partenaires.html">partenaire</a></li>
+            <li><a href="aPropos.html">A propos</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
           </ul>
         </div>
         <img
@@ -37,56 +37,30 @@
         <p>Cliquez sur une offre pour découvrir les destinations</p>
       </section>
 
-      <!-- Proposition avec les 3 offres en format card -->
-      <section class="card-container">
-        <div class="card">
-          <div>
-            <h2 class="card-offer">Standard</h2>
+      <section class="offer-switcher">
+        <div class="offer-card">
+          <!-- Onglets -->
+          <div class="offer-tabs">
+            <button class="tab active" data-offer="standard">Standard</button>
+            <button class="tab" data-offer="confort">Confort</button>
+            <button class="tab" data-offer="premium">Premium</button>
           </div>
-          <div>
-            <p class="card-prix">2 nuits <strong>99€</strong>/p.</p>
-            <ul class="card-prestation">
+
+          <!-- Contenu dynamique -->
+          <div class="offer-content">
+            <h2 class="card-offer" id="offer-title">Standard</h2>
+            <p class="card-prix" id="offer-price">
+              2 nuits <strong>99€</strong>/p.
+            </p>
+            <ul class="card-prestation" id="offer-features">
               <li>— Hôtel</li>
               <li>— Billets de train inclus</li>
               <li>— 6 villes disponibles</li>
             </ul>
+            <a href="#" class="card-villes" id="offer-link"
+              >Choisir une ville ›</a
+            >
           </div>
-          <a href="destination-offre.html" class="card-villes"
-            >Choisir une ville ›</a
-          >
-        </div>
-        <div class="card">
-          <div class="card-badge">Populaire</div>
-          <div>
-            <h2 class="card-offer">Confort</h2>
-          </div>
-          <div>
-            <p class="card-prix">2 nuits <strong>149€</strong>/p.</p>
-            <ul class="card-prestation">
-              <li>— Hôtel + train</li>
-              <li>— Restaurant pour 2 personnes</li>
-              <li>— 6 villes disponibles</li>
-            </ul>
-          </div>
-          <a href="destination-offre-1.html" class="card-villes"
-            >Choisir une ville ›</a
-          >
-        </div>
-        <div class="card">
-          <div>
-            <h2 class="card-offer">Premium</h2>
-          </div>
-          <div>
-            <p class="card-prix">2 nuits <strong>199€</strong>/p.</p>
-            <ul class="card-prestation">
-              <li>— Hôtel + train + restaurant</li>
-              <li>— 2h spa & massage pour 2</li>
-              <li>— 6 villes disponibles</li>
-            </ul>
-          </div>
-          <a href="destination-offre-2.html" class="card-villes"
-            >Choisir une ville ›</a
-          >
         </div>
       </section>
     </main>
@@ -120,5 +94,7 @@
 
       <div class="footer-bottom">© 2026 French Crew. Tous droits réservés.</div>
     </footer>
+    <script src="java.js"></script>
+    <script src="offres.js"></script>
   </body>
 </html>
