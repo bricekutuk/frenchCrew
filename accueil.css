@@ -1,3 +1,5 @@
+/* // TOUT LE CORPS // */
+
 * {
     padding: 0;
     margin: 0;
@@ -8,6 +10,10 @@
 body {
     background-color:#EEF1F5 ;
 }
+
+/* // FIN DE TOUT LE CORPS // */
+
+/* // NAV BAR // */
 
 #Menu{
     list-style: none;
@@ -127,6 +133,8 @@ color: white;
             box-shadow: 0 8px 28px rgba(201,168,76,.5);
          }
 
+ /* // FIN NAV BAR // */
+
 .titreH2 {
     text-align: center;
     padding: 4rem 1rem 2.5rem;
@@ -157,6 +165,10 @@ color: white;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
+
+/* =====================
+   FIN GRILLE
+===================== */
 
 /* =====================
    CARTE
@@ -207,6 +219,8 @@ color: white;
     border-radius: 20px;
 }
 
+/* FIN Image + badge prix */
+
 /* Contenu sous l'image */
 .card-body {
     padding: 1rem 1.2rem 1.2rem;
@@ -238,6 +252,23 @@ color: white;
     color: #9ca3af;
     margin-top: 0.3rem;
 }
+
+/* FIN Contenu sous l'image */
+
+/* =====================
+   FIN CARTE
+===================== */
+
+/* // ROUE DE LA CHANCE // */
+
+/* // FIN ROUE DE LA CHANCE // */
+#roueDeLaChance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* // CSS FOOTER // */
 
 .footer {
     background: linear-gradient(135deg, #062343, #1e6ab3);
@@ -292,3 +323,5 @@ color: white;
     text-align: center;
     font-size: 14px;
 }
+
+/* // FIN CSS FOOTER // */
