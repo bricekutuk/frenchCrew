@@ -3,77 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="destination-offre-2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="destination-offre.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <title>French Crew</title>
 </head>
 <body>
     <header>
+        <nav id="nav">
+        <a href="accueil.html"><img src="/images/logo1.png" alt="logo" class="logo1"></a>
+        <div id="Menu">
+            <ul id="onglet">
+                <li><a href="aPropos.html">A PROPOS</a></li>
+                <li><a href="galerie.html">GALERIE</a></li>
+                <li><a href="partenaires.html">PARTENAIRE</a></li>         
+            </ul>
+        </div>
+        <img src="/images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
+    </nav>
 
     </header>
-          <h2>PREMIUM💰💰💰</h2>
+          <h2 id="offer-title">PREMIUM</h2>
+<div id="offer-menu" class="hidden">
+  <a href="destination-offre.html" class="button" data-offer="confort">STANDARD</a>
+  <a href="destination-offre-1.html" class="button" data-offer="premium">CONFORT</a>
+</div>       
     <main>    
         <section class="cards">
             <div class="card card1">
-                <a href="destination-paris.html">
+                <a href="reserver.html">
                 <img src="images-destination-offre/paris.jpg">
-                <p><i class="fa-solid fa-location-dot"></i> Île-de-France</p>
-                <h3>Paris</h3>
+                <p class="destination"><i class="fa-solid fa-location-dot"></i> Île-de-France</p>
+                <h3 class="destination-name">Paris</h3>
                 <p class="text">Découvrez la ville lumière lors d'un séjour inoubliable. Profitez des monuments emblématiques, de la gastronomie française et de l'ambiance unique de Paris.</p>
                <h5>199€ / personne</h5>
             </a>
             </div>
 
             <div class="card card2">
-                <a href="destination-lille.html">
+                <a href="reserver.html">
                 <img src="images-destination-offre/Lille.jpg">
-                <p><i class="fa-solid fa-location-dot"></i> Hauts-de-France</p>
-                <h3>Lille</h3>
+                <p class="destination"><i class="fa-solid fa-location-dot"></i> Hauts-de-France</p>
+                <h3 class="destination-name">Lille</h3>
                 <p class="text">Explorez Lille et son centre historique lors d'un séjour unique. Découvrez sa culture, sa gastronomie et son ambiance chaleureuse et festive.</p>
                 <h5>199€ / personne</h5>
             </a>
             </div>
             <div class="card card3">
-                <a href="destination-strasbourg.html">
+                <a href="reserver.html">
                 <img src="images-destination-offre/Strasbourg.jpg">
-                <p><i class="fa-solid fa-location-dot"></i> Grand Est</p>
-                <h3>Starbourg</h3>
+                <p class="destination"><i class="fa-solid fa-location-dot"></i> Grand Est</p>
+                <h3 class="destination-name">Strasbourg</h3>
                 <p class="text">Découvrez Strasbourg et ses canaux pittoresques lors d'un séjour unique. Profitez de sa gastronomie, de son architecture et de son ambiance festive.</p>
                 <h5>199€ / personne</h5>
             </a>
             </div>
             <div class="card card4">
-                <a href="destination-toulouse.html">
+                <a href="reserver.html">
                 <img src="images-destination-offre/Toulouse.jpeg">
-                <p><i class="fa-solid fa-location-dot"></i> Occitanie</p>
-                <h3>Toulouse</h3>
+                <p class="destination"><i class="fa-solid fa-location-dot"></i> Occitanie</p>
+                <h3 class="destination-name">Toulouse</h3>
                 <p class="text">Partez à la découverte de Toulouse et ses ruelles animées lors d'un séjour unique. Savourez sa gastronomie et son ambiance colorée et vivante.</p>
                 <h5>199€ / personne</h5>
             </a>
             </div>
             <div class="card card5">
-                <a href="destination-rochelle.html">
+                <a href="reserver.html">
                 <img src="images-destination-offre/LaRochelle.webp">
-                <p><i class="fa-solid fa-location-dot"></i> Nouvelle-Aquitaine</p>
-                <h3>La Rochelle</h3>
+                <p class="destination"><i class="fa-solid fa-location-dot"></i> Nouvelle-Aquitaine</p>
+                <h3 class="destination-name">La Rochelle</h3>
                 <p class="text">Découvrez La Rochelle et son charmant vieux port lors d'un séjour unique. Profitez de la mer, de sa gastronomie et de l'atmosphère maritime.</p>
                 <h5>199€ / personne</h5>
             </a>
             </div>
             <div class="card card6">
-                <a href="destination-marseille.html">
+                <a href="reserver.html">
                 <img src="images-destination-offre/Marseille.jpg">
-                <p><i class="fa-solid fa-location-dot"></i> Provence-Alpes-Côte d’Azur</p>
-                <h3>Marseille</h3>
+                <p class="destination"><i class="fa-solid fa-location-dot"></i> Provence-Alpes-Côte d’Azur</p>
+                <h3 class="destination-name">Marseille</h3>
                 <p class="text">Explorez Marseille et son vieux port animé lors d'un séjour unique. Découvrez la mer, la gastronomie locale et le charme ensoleillé de la ville.</p>
                <h5>199€ / personne</h5>
             </a>
             </div>
         </section>
     </main>
-     <!-- footer -->
- <footer class="footer">
+    <!-- footer -->
+   <footer class="footer">
         <div class="footer-container">
 
             <div class="footer-col">
@@ -105,6 +120,7 @@
         </div>
 
     </footer>
+    <script src="destination-offre-2.js"></script>
     
 </body>
 </html>

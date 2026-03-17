@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color:#EEF1F5 ;
+}
+
+#Menu{
+    list-style: none;
+    height: 100%;
+    font-size: 2em;
+}
+
+a {
+    font-size: 25px;
+}
+
+
+#Menu.scrolled {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+#nav .menu-hamburger {
+    right: 35px;
+    width: 35px;
+    display: none;
+}
+
+#nav .menu-hamburger:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.945);
+    transform: translateY(-4px);
+}
+
+nav a {
+color: white;
+}
+
+#nav #Menu ul li:hover{
+     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+#nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-h);
+            z-index: 100;
+            transition: background var(--transition), box-shadow var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        #nav.scrolled {
+            background: linear-gradient(135deg, #062343, #1e6ab3);
+            box-shadow: 0 2px 20px rgba(0,0,0,.25);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo1 {
+            font-size: 2em;
+            height: 3em;
+            filter: brightness(0) invert(1);
+            transition: opacity .2s;
+             }
+             
+        .logo1:hover {
+             opacity: .85; 
+            }
+        
+        #onglet {
+            list-style: none;
+            display: flex;
+            gap: 2em;
+        }
+
+#hero {
+        height: 100vh;
+    min-height: 560px;
+    background: linear-gradient(to bottom, rgba(26, 35, 64, .55) 0%, rgba(26, 35, 64, .2) 60%, rgba(26, 35, 64, .6) 100%), url(/images/entete.png) center / cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+ #lesOffres {
+           color: var(--white);
+    padding: 0 24px;
+    max-width: 680px;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px
+        }
+        #lesOffres p {
+            font-size: clamp(1.6rem, 5vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 32px;
+            text-shadow: 0 2px 12px rgba(0,0,0,.4);
+            letter-spacing: .01em;
+        }
+        #lesOffres a {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: .95rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 14px 36px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: background .2s, transform .2s, box-shadow .2s;
+            box-shadow: 0 4px 20px rgba(201,168,76,.4);
+        }
+        #lesOffres div:hover {
+            background: #e0b955;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(201,168,76,.5);
+         }
+
+.titreH2 {
+    text-align: center;
+    padding: 4rem 1rem 2.5rem;
+}
+
+.titreH2 h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.6rem;
+}
+
+.titre-sous {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* =====================
+   GRILLE
+===================== */
+#destination {
+    padding: 0 3rem 5rem;
+}
+
+#block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* =====================
+   CARTE
+===================== */
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+/* Image + badge prix */
+.card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.imageDeVille {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .imageDeVille {
+    transform: scale(1.04);
+}
+
+.card-prix {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+}
+
+/* Contenu sous l'image */
+.card-body {
+    padding: 1rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-region {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.card-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.card-desc {
+    font-size: 0.82rem;
+    color: #6b7280;
+    line-height: 1.55;
+}
+
+.card-duree {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    margin-top: 0.3rem;
+}
+
+.footer {
+    background: linear-gradient(135deg, #062343, #1e6ab3);
+    color: white;
+    padding: 50px 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 14px;
+}

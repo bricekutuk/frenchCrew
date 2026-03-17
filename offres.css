@@ -4,19 +4,19 @@
 }
 
 :root {
-  --main-font: "Arial";
+  --main-font: "Roboto", sans-serif;
   --main-color: darkblue;
   --second-color: white;
 }
 
-html,
 body {
+  font-family: var(--main-font);
+}
+
+main {
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-body {
   background-image: url("background-offer.png");
   background-size: cover;
   background-position: center;
@@ -31,9 +31,69 @@ main {
   flex: 1;
 }
 
-header,
-footer {
-  border: 2px solid orange;
+header {
+  background: linear-gradient(135deg, #062343, #1e6ab3);
+}
+
+#Menu {
+  list-style: none;
+  height: 100%;
+  font-size: 2em;
+}
+
+#Menu.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+#nav .menu-hamburger {
+  right: 35px;
+  width: 35px;
+  display: none;
+}
+
+#nav .menu-hamburger:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#nav #Menu ul li:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+#nav.scrolled {
+  background: rgba(26, 35, 64, 0.96);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.logo1 {
+  font-size: 2em;
+  height: 3em;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s;
+}
+
+.logo1:hover {
+  opacity: 0.85;
+}
+
+#onglet {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  font-size: 25px;
 }
 
 .hero {
@@ -95,7 +155,7 @@ footer {
 .card-offer {
   font-family: var(--main-font);
   font-size: 2rem;
-  color: var(--main-color);
+  color: linear-gradient(135deg, #062343, #1e6ab3);
 }
 
 .card-prix {
@@ -119,7 +179,7 @@ footer {
 
 .card-villes {
   color: var(--second-color);
-  background-color: var(--main-color);
+  background: linear-gradient(135deg, #062343, #1e6ab3);
   font-size: 0.9rem;
   letter-spacing: 0.15;
   text-transform: upperCase;
@@ -150,4 +210,58 @@ footer {
   text-transform: uppercase;
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
+}
+
+.footer {
+  background: linear-gradient(135deg, #062343, #1e6ab3);
+  color: white;
+  padding: 50px 10%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-size: 14px;
 }

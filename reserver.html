@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réserver</title>
+    <title>French Crew | Réserver</title>
     <link rel="stylesheet" href="reserver.css">
 </head>
-<nav>
-
-</nav>
+<nav id="nav">
+        <a href="accueil.html"><img src="/images/logo1.png" alt="logo" class="logo1"></a>
+        <div id="Menu">
+            <ul id="onglet">
+                <li><a href="aPropos.html">A propos</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="partenaires.html">Partenaires</a></li>         
+            </ul>
+        </div>
+        <img src="/images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
+    </nav>
 <body>
   <main>
     <section class="reservation">
@@ -16,6 +24,19 @@
       <p>Choisissez le nombre de personnes, les dates et l’offre souhaitée.</p>
 
       <form action="#" method="post">
+
+        <div>
+          <label for="city">Ville du séjour :</label>
+          <select id="city" name="city" required>
+            <option value="">-- Choisir --</option>
+            <option value="Toulouse">Toulouse</option>
+            <option value="Paris">Paris</option>
+            <option value="La Rochelle">La Rochelle</option>
+            <option value="Strasbourg">Strasbourg</option>
+            <option value="Lille">Lille</option>
+            <option value="Marseille">Marseille</option>
+          </select>
+        </div>
         
         <div>
           <label for="guests">Nombre de personnes :</label>
@@ -66,11 +87,11 @@
             <div class="footer-col">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Nos offres</a></li>
-                    <li><a href="#">À propos</a></li>
-                    <li><a href="#">Galerie</a></li>
-                    <li><a href="#">Partenaires</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="offres.html">Nos offres</a></li>
+                    <li><a href="aPropos.html">À propos</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
                 </ul>
             </div>
 
@@ -89,5 +110,6 @@
     </footer>
 </body>
 <script src="reserver.js"></script>
+<script src="java.js"></script>
 
 </html>
