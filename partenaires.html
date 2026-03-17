@@ -15,20 +15,18 @@
         <a href="accueil.html"><img src="logo.png" alt="logo" class="logo1"></a>
         <div id="Menu">
             <ul id="onglet">
-                <li><a href="aPropos.html">a propos</a></li>
-                <li><a href="galerie.html">galerie</a></li>
-                <li><a href="partenaires.html">partenaire</a></li>
+                <li><a href="aPropos.html">A propos</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="partenaires.html">Partenaires</a></li>
             </ul>
         </div>
         <img src="/images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
     </nav>
-    <header>
-        <h1>Nos Partenaires</h1>
-    </header>
     <section class="hero">
+        <h1>Nos Partenaires</h1>
         <h2>Découvrez la France autrement</h2>
         <p>Des séjours uniques dans les plus belles régions.</p>
-        <li> <a href="galerie.html" class="btn">Découvrir</a></li>
+        <a href="galerie.html" class="btn">Découvrir</a>
     </section>
     <!-- row 1 -->
     <div class="partner-row">
@@ -72,7 +70,7 @@
         <h2>Devenez partenaire</h2>
         <p>Vous êtes un professionnel du tourisme et souhaitez collaborer avec nous ? Contactez notre équipe
             pour découvrir nos opportunités de partenariat.</p>
-        <li><a href="partenaires.html" class="btn">Contactez-nous</a></li>
+        <a href="partenaires.html" class="btn">Contactez-nous</a>
     </div>
     <!-- footer -->
     <footer class="footer">
@@ -107,6 +105,16 @@
         </div>
 
     </footer>
+    <script src="java.js"></script>
+    <script src="partenaires.js"></script>
+    <script>
+        document.querySelectorAll(".btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                btn.classList.add("clicked");
+                setTimeout(() => btn.classList.remove("clicked"), 200);
+            });
+        });
+    </script>
 </body>
 
 </html>
