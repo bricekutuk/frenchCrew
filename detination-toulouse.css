@@ -7,7 +7,7 @@
 #Menu{
     list-style: none;
 height: 100%;
-font-size: 2em;
+font-size: 20px;
 }
 
 
@@ -15,6 +15,7 @@ font-size: 2em;
 #Menu.scrolled {
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
+
 
 #nav .menu-hamburger {
     right: 35px;
@@ -28,8 +29,9 @@ font-size: 2em;
 }
 
 nav a {
-color: white;
+color: rgb(255, 255, 255);
 text-decoration: none;
+
 }
 
 #nav #Menu ul li:hover{
@@ -37,38 +39,92 @@ text-decoration: none;
     transform: translateY(-4px);
 }
 
+h1{
+    margin-top: 150px;
+}
+
 #nav {
+     position: fixed;
+     top: 0; left: 0; right: 0;
+     height: var(--nav-h);
+     z-index: 100;
+     transition: background var(--transition), box-shadow var(--transition);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0px 30px 0px 30px;
+     background: linear-gradient(135deg, #062343, #1e6ab3);
+}
+
+.logo1 {
+     font-size: 2em;
+     height: 80px;
+     filter: brightness(0) invert(1);
+     transition: opacity .2s;
+}
+
+.logo1:hover {
+     opacity: .85; 
+}
+
+#onglet {
+     list-style: none;
+     display: flex;
+     gap: 2em;
+}
+
+@media screen and (max-width:900px) {
+
+    #nav{
+        padding: 0;
+           position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-h);
+            z-index: 100;
+            transition: background var(--transition), box-shadow var(--transition);
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 30px;
-            background: linear-gradient(135deg, #062343, #1e6ab3);
-            width: 100%;
-            margin-bottom: 50px;
-        }
-        #nav.scrolled {
-            background: rgba(26,35,64,.96);
-            box-shadow: 0 2px 20px rgba(0,0,0,.25);
-            backdrop-filter: blur(10px);
-        }
+    }
+    #nav .menu-hamburger {
+        display: block;
+        position: absolute;
+        width: 35px;
+    }
 
-        .logo1 {
-            font-size: 2em;
-            height: 3em;
-            filter: brightness(0) invert(1);
-            transition: opacity .2s;
-             }
+    #Menu {
+        top: 0;
+        left: 0;
+       position: absolute;
+       background-color: rgb(255, 255, 255, 0.299);
+       backdrop-filter: blur(8px);
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-left: -110%;
+       transition: all 0.5s ease;
+    }
 
-        .logo1:hover {
-             opacity: .85; 
-            }
+    #Menu.mobile-menu{
+    margin-left: 0;
+}
 
-        #onglet {
-            list-style: none;
-            display: flex;
-            gap: 2em;
-            font-size: 20px;
-        }
+    #nav .logo1 {
+   position: absolute;
+   left: 50px;
+   top: -10px;
+}
+#onglet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+}
 body{
     background:#f4f4f4;
     display:flex;
@@ -78,7 +134,7 @@ body{
 }
 h1 {
     width: 800px;
-    height: 50px;
+    height: 50px; 
 }
 
 .page-container{
@@ -99,6 +155,7 @@ h1 {
     display:flex;
     justify-content:center;
     align-items:center;
+    box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48) , -6px -2px 16px 0px rgba(255, 255, 255, 0.8);
 }
 
 .cards{
@@ -163,9 +220,7 @@ h1 {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
     gap: 40px;
-    flex-wrap: wrap;
 }
 
 .footer-col {
