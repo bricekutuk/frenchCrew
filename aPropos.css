@@ -1,5 +1,5 @@
 * {
-    margin: 0px;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -9,21 +9,17 @@ body {
     background-color: white;
     color: black;
     font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
-/*nav*/
 
-/* nav */
+/* ── nav ── */
 #Menu {
     list-style: none;
     height: 100%;
-    font-size: 2em;
-    display: flex;
-    align-items: center;
+    font-size: 20px;
 }
 
 #Menu.scrolled {
@@ -42,7 +38,7 @@ body {
 }
 
 nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -52,209 +48,227 @@ nav a {
 }
 
 #nav {
-    width: calc(100% + 40px);
-    margin: -30px 0 60px -20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-h);
+    z-index: 100;
+    transition: background var(--transition), box-shadow var(--transition);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 24px;
+    padding: 0 30px;
     background: linear-gradient(135deg, #062343, #1e6ab3);
-}
-
-#nav.scrolled {
-    background: rgba(26, 35, 64, 0.96);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
-    height: 80px;
-    
 }
 
 .logo1 {
     font-size: 2em;
-    height: 2.3em;
+    height: 80px;
     filter: brightness(0) invert(1);
-    transition: opacity 0.2s;
+    transition: opacity .2s;
 }
 
 .logo1:hover {
-    opacity: 0.85;
+    opacity: .85;
 }
 
 #onglet {
     list-style: none;
     display: flex;
     gap: 2em;
-    align-items: center;
 }
 
-/* bloc haut */
+/* ── titre page ── */
 h1 {
-    max-width: 1200px;
-    margin: 0 auto 70px auto;
+    max-width: 1400px;
+    margin: 150px auto 35px auto;
     text-align: start;
-    font-size: 38px;}
+    font-size: 38px;
+    color: #0b1f4d;
+}
 
-.apropos {
-    max-width: 1200px;
-    margin: 0 auto 50px auto;
+/* ── grand conteneur principal ── */
+.apropos-page {
+    max-width: 1400px;
+    width: calc(100% - 40px);
+    margin: 0 auto 80px auto;
+    background: white;
+    color: #0b1f4d;
+    border-radius: 26px;
+    box-shadow: 0 12px 60px rgba(6, 35, 67, 0.15), 0 2px 14px rgba(6, 35, 67, 0.08);
+    padding: 70px 64px 80px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ── partie haute : texte gauche + 2 photos droite ── */
+.hero-apropos {
+    display: grid;
+    grid-template-columns: 1fr 280px;   /* texte prend le reste, photos = colonne fixe */
+    gap: 36px;
+    align-items: stretch;               /* les deux colonnes ont la même hauteur */
+}
+
+/* ── gros bloc texte gauche ── */
+.texte-apropos {
     background: linear-gradient(135deg, #062343, #1e6ab3);
     color: white;
-    border-radius: 24px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    border-radius: 22px;
     padding: 40px;
-}
-
-/* titre */
-.Section {
-    margin-bottom: 10px;
-}
-
-/* sous-titre */
-.Section2 {
-    margin-bottom: 25px;
+    box-shadow: 0 10px 28px rgba(6, 35, 67, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .soustitre {
-    margin: 0;
-    text-align: start;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 1.4;
-}
-
-/* texte */
-.Section3 {
-    padding: 0;
+    margin: 0 0 26px 0;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.3;
 }
 
 .Para {
     margin: 0 0 22px 0;
-    text-align: start;
-    line-height: 1.8;
-    font-size: 18px;
+    line-height: 1.9;
+    font-size: 17px;
 }
 
 .Para:last-child {
     margin-bottom: 0;
 }
 
-/* bloc du bas */
-.bas-page {
-    max-width: 1350px;
-    margin: 0 auto 80px auto;
+/* ── colonne droite : 2 photos empilées ── */
+.bloc-photos-droite {
     display: flex;
-    gap: 40px;
-    align-items: stretch;
+    flex-direction: column;
+    gap: 26px;
+    height: 100%;                       /* occupe toute la hauteur de la grille */
 }
 
-/* colonne gauche */
-.Section4 {
-    width: 320px;
-    min-width: 320px;
-    background: linear-gradient(135deg, #062343, #1e6ab3);
-    color: white;
-    border-radius: 17px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-    padding: 26px;
+.mini-photo {
+    flex: 1;
+    border-radius: 18px;
     overflow: hidden;
+    background-color: #e8edf5;
+    box-shadow: 0 8px 22px rgba(6, 35, 67, 0.14);
+    min-height: 0;
+}
+
+.mini-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.mini-photo img {
+    transition: transform 0.3s ease;
+}
+
+.mini-photo:hover img {
+    transform: scale(1.07);
+}
+/* ── zone team ── */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 70px;
+    padding-top: 50px;
+    border-top: 2px solid rgba(6, 35, 67, 0.09);
 }
 
 .equipe {
-    margin: 0 auto 40px auto;
-    text-align: center;
+    width: fit-content;
+    margin: 0;
     font-size: 26px;
-    font-weight: normal;
-    color: #0b1f4d;
-    background-color: white;
-    padding: 10px 18px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(135deg, #062343, #1e6ab3);
+    padding: 10px 22px;
     border-radius: 14px;
-
 }
 
+/* ── ligne des 6 photos ── */
 .photo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
-    row-gap: 120px;
-    justify-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    align-items: center;
 }
 
-.photo img {
-    width: 100px;
-    height: 100px;
+/* ── cartes photos ── */
+.photo-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;               /* cercles parfaits quelle que soit la largeur */
+    cursor: pointer;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
     display: block;
     border: 2px solid white;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* colonne droite */
-.Section5 {
-    flex: 1;
-    background: linear-gradient(135deg, #062343, #1e6ab3);
+.prenom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    border-radius: 17px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-    padding: 26px;
-    display: flex;
-    flex-direction: column;
-    gap: 55px;
-    overflow: hidden;
+    font-weight: bold;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    z-index: 2;
 }
 
-.loc,
-.entreprise {
-    width: 100%;
+.photo-card:hover img {
+    filter: blur(3px) brightness(0.55);
+}
+
+.photo-card:hover .prenom {
+    opacity: 1;
+}
+
+/* ── réseaux sociaux ── */
+.reseau {
     display: flex;
     justify-content: center;
-}
-
-.loc img,
-.entreprise img {
-    width: 92%;
-    height: 310px;
-    object-fit: cover;
-    display: block;
-    border-radius: 22px;
-    transition: transform 0.35s ease;
-}
-
-.loc img:hover,
-.entreprise img:hover {
-    transform: scale(1.04);
-}
-
-/* réseaux */
-.reseau {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    background: linear-gradient(135deg, #062343, #1e6ab3);
-    color: white;
-    padding: 24px;
-    text-align: center;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    align-items: center;
+    gap: 24px;
+    padding: 20px 0;
 }
 
 .reseau a {
-    display: inline-block;
-    margin: 0 18px;
+    color: #062343;
     text-decoration: none;
 }
 
 .reseau i {
-    color: #8fb3ff;
     font-size: 28px;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.reseau a:hover i {
-    transform: scale(1.12);
+.reseau i:hover {
+    color: #1e6ab3;
+    transform: translateY(-3px);
 }
 
-
+/* ── footer ── */
 .footer {
     width: calc(100% + 40px);
     margin: 0 0 -30px -20px;
-   background: linear-gradient(135deg, #062343, #1e6ab3);
+    background: linear-gradient(135deg, #062343, #1e6ab3);
     color: white;
     padding: 35px 30px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
@@ -316,120 +330,99 @@ h1 {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* ---------- TABLETTE ---------- */
-@media (max-width: 1024px) {
-    body {
-        padding: 24px 16px;
-    }
-
-    .apropos {
+/* ── responsive ── */
+@media screen and (max-width: 900px) {
+    #nav {
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--nav-h);
+        z-index: 100;
+        transition: background var(--transition), box-shadow var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 30px;
-        margin-bottom: 40px;
     }
 
-    .titre h1 {
-        font-size: 32px;
+    #nav .menu-hamburger {
+        display: block;
+        position: absolute;
+        width: 35px;
+        right: 30px;
+        top: 10px;
+        z-index: 101;
+        cursor: pointer;
     }
 
-    .soustitre {
-        font-size: 21px;
+    #Menu {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgb(255, 255, 255, 0.299);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -110%;
+        transition: all 0.5s ease;
     }
 
-    .Para {
-        font-size: 17px;
-        line-height: 1.7;
+    #Menu.mobile-menu {
+        margin-left: 0;
     }
 
-    .bas-page {
-        max-width: 100%;
+    #nav .logo1 {
+        position: absolute;
+        left: 50px;
+        top: -10px;
+    }
+
+    #onglet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 24px;
     }
 
-    .Section4 {
-        width: 280px;
-        min-width: 280px;
-        padding: 22px;
+    #nav a {
+        color: #062343;
     }
 
-    .equipe {
-        font-size: 22px;
-        margin-bottom: 30px;
-    }
-
-    .photo {
-        column-gap: 24px;
-        row-gap: 60px;
-    }
-
-    .photo img {
-        width: 85px;
-        height: 85px;
-    }
-
-    .Section5 {
-        padding: 22px;
-        gap: 35px;
-    }
-
-    .loc img,
-    .entreprise img {
-        width: 95%;
-        height: 260px;
-    }
-
-    .reseau {
-        width: calc(100% + 32px);
-        margin-left: -16px;
-        padding: 20px;
-    }
-
-    .reseau i {
-        font-size: 26px;
-    }
-
-    .footer {
-        width: calc(100% + 32px);
-        margin: 0 0 -24px -16px;
-        padding: 30px 24px;
-    }
-
-    .footer-container {
-        gap: 24px;
-    }
-
-    .footer-col h3,
-    .footer-col h4 {
-        font-size: 20px;
-    }
-}
-
-/* ---------- MOBILE CLASSIQUE ---------- */
-@media (max-width: 768px) {
     body {
-        padding: 20px 14px;
+        padding: 20px 12px;
     }
 
-    .apropos {
-        padding: 24px 20px;
-        margin-bottom: 30px;
-        border-radius: 18px;
-    }
-
-    .titre {
-        margin-bottom: 20px;
-    }
-
-    .titre h1 {
+    h1 {
+        margin: 120px auto 30px auto;
         font-size: 28px;
+        line-height: 1.3;
     }
 
-    .Section2 {
-        margin-bottom: 18px;
+    .apropos-page {
+        padding: 18px;
+        border-radius: 18px;
+        margin: 0 auto 50px auto;
+    }
+
+    /* Sur mobile : tout en colonne */
+    .hero-apropos {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .texte-apropos {
+        padding: 18px;
     }
 
     .soustitre {
-        font-size: 19px;
-        line-height: 1.5;
+        font-size: 22px;
+        margin-bottom: 14px;
     }
 
     .Para {
@@ -437,60 +430,40 @@ h1 {
         line-height: 1.7;
     }
 
-    .bas-page {
-        flex-direction: column;
-        gap: 24px;
-        margin-bottom: 30px;
+    /* Les 2 photos  côte à côte  */
+    .bloc-photos-droite {
+        flex-direction: row;
+        height: auto;
     }
 
-    .Section4,
-    .Section5 {
-        width: 100%;
-        min-width: 0;
-        border-radius: 18px;
-    }
-
-    .Section4 {
-        padding: 20px;
+    .mini-photo {
+        flex: 1;
+        aspect-ratio: 1 / 1;
     }
 
     .equipe {
-        font-size: 20px;
-        margin-bottom: 24px;
-        padding: 8px 14px;
+        font-size: 22px;
+        padding: 10px 16px;
     }
 
+    /* 3 colonnes  pour la team */
     .photo {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 20px;
-        row-gap: 28px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
     }
 
-    .photo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .Section5 {
-        padding: 20px;
-        gap: 24px;
-    }
-
-    .loc img,
-    .entreprise img {
-        width: 100%;
-        height: 220px;
-        border-radius: 16px;
+    .prenom {
+        font-size: 13px;
     }
 
     .reseau {
-        width: calc(100% + 28px);
-        margin-left: -14px;
+        width: calc(100% + 24px);
+        margin-left: -12px;
         padding: 18px 12px;
     }
 
     .reseau a {
-        margin: 0 12px;
+        margin: 0 10px;
     }
 
     .reseau i {
@@ -498,33 +471,34 @@ h1 {
     }
 
     .footer {
-        width: calc(100% + 28px);
-        margin: 0 0 -20px -14px;
+        width: calc(100% + 24px);
+        margin: 0 0 -20px -12px;
         padding: 24px 18px;
     }
 
     .footer-container {
         flex-direction: column;
-        gap: 22px;
+        gap: 24px;
     }
 
     .footer-col {
-        min-width: 0;
+        min-width: 100%;
     }
 
     .footer-col h3,
     .footer-col h4 {
-        font-size: 18px;
-        margin-bottom: 10px;
+        font-size: 20px;
+        margin-bottom: 12px;
     }
 
     .footer-col p,
     .footer-col ul li a {
         font-size: 15px;
+        line-height: 1.6;
     }
 
     .footer-bottom {
-        margin-top: 22px;
+        margin-top: 20px;
         padding-top: 16px;
         font-size: 13px;
     }

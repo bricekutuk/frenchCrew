@@ -1,11 +1,12 @@
 function sendData(){
 
+    let city = document.getElementById("city").value
     let offer = document.getElementById("offer").value;
     let guests = document.getElementById("guests").value;
     let checkIn = document.getElementById("checkin").value;
     let checkOut = document.getElementById("checkout").value;
 
-    if(offer === "" || guests === "" || checkIn === "" || checkOut === ""){
+    if(offer === "" || guests === "" || checkIn === "" || checkOut === "" || city === ""){
         alert("Formulaire incomplet");
         event.preventDefault();
         return;
@@ -15,6 +16,7 @@ function sendData(){
     localStorage.setItem("guests", guests);
     localStorage.setItem("checkIn", checkIn);
     localStorage.setItem("checkOut", checkOut);
+    localStorage.setItem("city", city)
     
 
     let basic = 99;
