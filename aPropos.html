@@ -5,75 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Document</title>
+    <title>A propos</title>
     <link rel="stylesheet" href="aPropos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav id="nav">
-        <a href="accueil.html"><img src="logo.png" alt="logo" class="logo1"></a>
+        <a href="accueil.html"><img src="image apropos/logo.png" alt="logo" class="logo1"></a>
         <div id="Menu">
             <ul id="onglet">
-                <li><a href="aPropos.html">a propos</a></li>
-                <li><a href="galerie.html">galerie</a></li>
-                <li><a href="partenaires.html">partenaire</a></li>
+                <li><a href="aPropos.html">A Propos</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="partenaires.html">Partenaires</a></li>
             </ul>
         </div>
-        <img src="/images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
+        <img src="images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
     </nav>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger");
+        const menu = document.querySelector("#Menu");
+
+        menuHamburger.addEventListener("click", () => {
+            menu.classList.toggle("mobile-menu");
+        });
+    </script>
+
     <h1>À propos de nous</h1>
-    <section class="apropos">
-        <section class="Section">
+
+    <main class="apropos-page">
+        <section class="hero-apropos">
+            <div class="texte-apropos">
+                <h2 class="soustitre">Votre partenaire de confiance pour des séjours inoubliables en France</h2>
+
+                <p class="Para">
+                    French Crew est une agence fondée par six passionnés de voyage Adrian, Brice, Coline, Giorgi,
+                    Lucas et Michel, avec une envie simple : faire découvrir la France à travers des séjours
+                    soigneusement organisés, authentiques et accessibles.
+                </p>
+
+                <p class="Para">
+                    Chaque destination proposée par French Crew est sélectionnée avec exigence pour offrir un
+                    équilibre entre détente, authenticité et plaisir de découvrir, grâce à un réseau de partenaires
+                    locaux de confiance.
+                </p>
+            </div>
+
+            <div class="bloc-photos-droite">
+                <div class="mini-photo">
+                    <img src="image apropos/Position.png" alt="Localisation">
+                </div>
+
+                <div class="mini-photo">
+                    <img src="image apropos/facade.png" alt="Devanture">
+                </div>
+            </div>
         </section>
 
-        <section class="Section2">
-            <h2 class="soustitre">Votre partenaire de confiance pour des séjours inoubliables en France</h2>
-        </section>
+        <section class="team-section">
+            <h3 class="equipe">French Crew</h3>
 
-        <section class="Section3">
-            <p class="Para">
-                French Crew est une agence fondée par six passionnés de voyage Adrian, Brice, Coline, Giorgi,
-                Lucas et Michel avec une envie simple : faire découvrir la France à travers des séjours soigneusement
-                organisés, authentiques et accessibles. Nous créons des expériences clés en main partout en France, en
-                sélectionnant des destinations, des hébergements et des partenaires locaux de qualité.
-            </p>
-
-            <p class="Para">
-                Chaque destination proposée par French Crew est sélectionnée avec exigence, et chaque expérience est
-                pensée
-                pour offrir un équilibre entre détente, authenticité et plaisir de découvrir. De la côte aux villages de
-                caractère, des grandes villes aux coins plus confidentiels, l’agence met en valeur une France vivante,
-                élégante et inspirante. Grâce à un réseau de partenaires locaux de confiance, French Crew veille à
-                offrir à
-                ses voyageurs des séjours de qualité, sincères et soigneusement organisés, du départ jusqu’au retour.
-            </p>
-        </section>
-    </section>
-
-    <div class="bas-page">
-        <section class="Section4">
-            <h3 class="equipe">Photo de l'équipe</h3>
             <article class="photo">
-                <img src="AD.png" alt="Adrian">
-                <img src="Brice.png" alt="Brice">
-                <img src="coline.png.png" alt="Coline">
-                <img src="GIGI.png" alt="Giorgi">
-                <img src="Lucas.png" alt="Lucas">
-                <img src="mich.png" alt="Michel">
+                <div class="photo-card">
+                    <img src="image apropos/AD.png" alt="Adrian">
+                    <span class="prenom">Adrian</span>
+                </div>
+
+                <div class="photo-card">
+                    <img src="image apropos/Brice.png" alt="Brice">
+                    <span class="prenom">Brice</span>
+                </div>
+
+                <div class="photo-card">
+                    <img src="image apropos/coline.png.png" alt="Coline">
+                    <span class="prenom">Coline</span>
+                </div>
+
+                <div class="photo-card">
+                    <img src="image apropos/GIGI.png" alt="Giorgi">
+                    <span class="prenom">Giorgi</span>
+                </div>
+
+                <div class="photo-card">
+                    <img src="image apropos/Lucas.png" alt="Lucas">
+                    <span class="prenom">Lucas</span>
+                </div>
+
+                <div class="photo-card">
+                    <img src="image apropos/mich.png" alt="Michel">
+                    <span class="prenom">Michel</span>
+                </div>
             </article>
         </section>
-
-        <section class="Section5">
-            <picture class="loc">
-                <img src="Position.png" alt="localisation">
-            </picture>
-
-            <picture class="entreprise">
-                <img src="facade.png" alt="devanture">
-            </picture>
-        </section>
-    </div>
+    </main>
 
     <section class="reseau">
         <a href="https://instagram.com">
@@ -88,7 +113,7 @@
             <i class="fa-brands fa-facebook"></i>
         </a>
     </section>
-    <!-- footer -->
+
     <footer class="footer">
         <div class="footer-container">
 
@@ -119,7 +144,6 @@
         <div class="footer-bottom">
             © 2026 French Crew. Tous droits réservés.
         </div>
-
     </footer>
 </body>
 
