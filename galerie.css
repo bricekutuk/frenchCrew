@@ -43,7 +43,7 @@ text-decoration: none;
     transform: translateY(-4px);
 }
     
-body>*:not(#nav) {
+body>*:not(#nav):not(footer) {
     margin-top: var(--nav-h, 150px);
 }
 
@@ -162,19 +162,21 @@ section{
     display: grid;
     grid-column:span 2 ;
     grid-row: span 2;
-    
+    height: 75%;
 
 }
 .card11{
     display: grid;
     grid-column:span 1 ;
     grid-row: span 2;
+    height: 75%;
   
 }
 .card12{
     display: grid;
     grid-column:span 1 ;
     grid-row: span 2;
+    height: 75%;
     
 }
 .card img{
@@ -244,17 +246,16 @@ section{
     font-size: 14px;
 }
 @media (max-width: 900px){
-    
-    h1{ font-size: 45px; }
+    h1{
+    font-size: 30px;
+    text-align: center;
+    padding-left:0px;
+}
     .cards{
-        grid-template-columns: repeat(2,1fr);
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
     }
-    .card1{
-        display:none;
-    }
-    .card2, .card7, .card10{ grid-column: span 2; grid-row: span 1; }
-    .card4, .card11, .card12{ grid-row: span 1; }
-     
     #nav{
         padding: 0;
            position: fixed;
@@ -304,18 +305,23 @@ section{
     justify-content: center;
 }
 #nav a{
-    color: ;
+    color:#062343 ;
 }
-h1{
-    font-size: 30px;
-    text-align: center;
-    padding-left:0px;
+body>*:not(#nav):not(footer){
+    margin-top: var(--nav-h, 80px);
 }
-section{
-    margin-top: 30px;
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px;
 }
-body>*:not(#nav) {
-    margin-top: var(--nav-h, 100px);
+
+.card{
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 
