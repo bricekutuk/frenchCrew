@@ -37,12 +37,3 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".partner-row").forEach(row => {
     observer.observe(row);
 });
-document.querySelectorAll(".partner-row").forEach(row => {
-    const text = row.querySelector(".partner-text");
-    const image = row.querySelector(".partner-image");
-
-    if (row.classList.contains("reverse")) {
-        text.style.transform = "translateX(50px)";
-        image.style.transform = "translateX(-50px)";
-    }
-});

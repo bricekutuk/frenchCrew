@@ -97,7 +97,7 @@ body>*:not(#nav) {
 
 h1 {
     color: rgb(14, 14, 82);
-    text-align:left;
+    text-align: center;
     margin: 1rem;
     padding: 10px 10px;
     font-size: clamp(2rem, 5vw, 3rem);
@@ -274,7 +274,6 @@ span {
 
 @media (max-width: 900px) {
     #nav {
-        padding: 0;
         position: fixed;
         top: 0;
         left: 0;
