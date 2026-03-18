@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier</title>
+    <title>French Crew | Panier</title>
     <link rel="stylesheet" href="panier.css">
 </head>
 <nav id="nav">
-        <a href="accueil.html"><img src="/images/logo1.png" alt="logo" class="logo1"></a>
-        <div id="Menu">
-            <ul id="onglet">
-                <li><a href="accueil.html">A propos</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="partenaires.html">Partenaires</a></li>         
-            </ul>
-        </div>
-        <img src="/images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
-    </nav>
+  <a href="accueil.html"><img src="/images/logo1.png" alt="logo" class="logo1"></a>
+    <div id="Menu">
+      <ul id="onglet">
+          <li><a href="accueil.html">A propos</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="partenaires.html">Partenaires</a></li>         
+      </ul>
+    </div>
+  <img src="/images/imgMenu.png" alt="img menu side bar" class="menu-hamburger">
+</nav>
 <body>
     <main class="payment-container">
       <h1>Paiement de votre réservation</h1>
@@ -24,6 +24,7 @@
       <section class="booking-summary">
         <h2>Résumé du séjour</h2>
         <div class="summary-box">
+          <p><strong>Ville du séjour :</strong> <span id="city"></span></p>
           <p><strong>Nombre de personnes :</strong> <span id="recapGuests"></span></p>
           <p><strong>Date d'arrivée :</strong> <span id="recapCheckIn"></span></p>
           <p><strong>Date de départ :</strong> <span id="recapCheckOut"></span></p>
@@ -94,7 +95,9 @@
     let checkIn = localStorage.getItem("checkIn");
     let checkOut = localStorage.getItem("checkOut");
     let total = localStorage.getItem("total");
+    let city = localStorage.getItem("city");
 
+    document.getElementById("city").innerText = city;
     document.getElementById("recapOffre").innerText = offer;
     document.getElementById("recapCheckIn").innerText = checkIn;
     document.getElementById("recapCheckOut").innerText = checkOut;
@@ -134,5 +137,6 @@
         </div>
 
     </footer>
+    <script src="java.js"></script>
 </body>
 </html>
