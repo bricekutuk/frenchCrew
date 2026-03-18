@@ -114,4 +114,8 @@
     transition: 0.3s;
     border-radius: 5px;
 }
+
+#roue {
+    width: 400px;
+}
 }

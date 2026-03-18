@@ -293,6 +293,9 @@ color: white;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .popup-content p {
