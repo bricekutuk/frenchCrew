@@ -1,3 +1,5 @@
+// NAV BAR JS //
+
 const menuHamburger = document.querySelector(".menu-hamburger")
     const navLinks = document.querySelector("#Menu")
 
@@ -14,4 +16,6 @@ const menuHamburger = document.querySelector(".menu-hamburger")
             nav.classList.remove('scrolled');
         }
     });
+
+    // FIN NAV BAR JS //
 
