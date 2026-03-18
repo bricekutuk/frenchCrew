@@ -1,8 +1,19 @@
+function togglePopup() {
+    let popup = document.querySelector("#popup-overlay")
+    popup.classList.toggle("open")
+}
+
+
 const canvas = document.getElementById('roue');
 const ctx = canvas.getContext('2d');
 const boutonTourner = document.getElementById('tourner');
 
-const options = ['Strasbourg', 'Toulouse', 'Marseille', 'La rochelle', 'Lille', 'Paris'];
+const options = [   { nom: 'Strasbourg', url: 'destination-strasbourg.html' },
+    { nom: 'Toulouse', url: 'destination-toulouse.html' },
+    { nom: 'Marseille', url: 'destination-marseille.html' },
+    { nom: 'La rochelle', url: 'destination-rochelle.html' },
+    { nom: 'Lille', url: 'destination-lille.html' },
+    { nom: 'Paris', url: 'destination-paris.html' }];
 const couleurs = ['#1e6ab3', '#062343', '#1e6ab3', '#062343', '#1e6ab3', '#062343'];
 
 let angleActuel = 0;
@@ -39,7 +50,7 @@ function dessinerRoue() {
         ctx.textAlign = 'center';
         ctx.fillStyle = '#fff';
         ctx.font = 'bold 18px Roboto';
-        ctx.fillText(options[i], 140, 10);
+        ctx.fillText(options[i].nom, 140, 10);
         ctx.restore();
     }
 }
@@ -84,7 +95,11 @@ const angleParOption = (Math.PI * 2) / options.length;
 const index = Math.floor(angle / angleParOption) % options.length;
 const optionGagnante = options[index];
 
-        alert('Votre prochaine destination : ' + optionGagnante);
+alert('Votre prochaine destination : ' + optionGagnante.nom);
+
+setTimeout(() => {
+    window.location.href = optionGagnante.url;
+}, 1500);
     }
 }
 

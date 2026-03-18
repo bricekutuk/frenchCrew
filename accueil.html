@@ -128,10 +128,19 @@
 
     <!-- // SECTION ROUE DE LA CHANCE // -->
 
-     <section id="roueDeLaChance">
-        <canvas id="roue" width="500" height="500"></canvas>
-        <button id="tourner">Tourner la roue</button>
-    </section>
+
+    <button class="btnPopupRoue" onclick="togglePopup()">Laissez le destin choisir pour vous !</button>
+
+    <section id="roueDeLaChance">
+            <div id="popup-overlay">
+                <div class="popup-content">
+                    <canvas id="roue" width="500" height="500"></canvas>
+                    <button id="tourner">Tourner la roue</button>
+                    <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit"><img src="/images/imgClosePopup.png" alt=""></a>
+                 </div>
+                </div>
+            </div>
+        </section>
 
     <!-- // FIN SECTION ROUE DE LA CHANCE // -->
 

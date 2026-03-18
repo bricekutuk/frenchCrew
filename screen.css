@@ -63,7 +63,7 @@
     #nav .logo1 {
    position: absolute;
    left: 50px;
-   top: -25px;
+   top: -5px;
 }
 
 #block {
@@ -82,5 +82,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.titrePageAcceuilSurImage {
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 30px;
+         }
+
+.texteDeTitreSurImage {
+            font-size: 20px;
+            margin-bottom: 32px;
+         }
+
+.titreH2 {
+    padding: 8em 65px;
+    text-align: start;
+}
+
+.btnPopupRoue {
+    position: absolute;
+    right: 12%;
+    top: 540%;
+    padding: 15px 30px;
+    font-size: 15px;
+    background: linear-gradient(135deg, #062343, #1e6ab3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 }
