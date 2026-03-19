@@ -2,13 +2,13 @@ body {
     background: #e3e5e9;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #00008B;
+    color: #062343;
 }
 
 #Menu {
     list-style: none;
     height: 100%;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 
@@ -327,7 +327,7 @@ span {
     }
 
     #nav a {
-        color: blue;
+        color: #062343;
     }
 
     h1 {
