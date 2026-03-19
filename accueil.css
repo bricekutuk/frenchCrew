@@ -164,7 +164,7 @@ color: white;
 ===================== */
 #destination {
     padding: 0 3rem 5rem;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 #block {
@@ -327,9 +327,6 @@ color: white;
 }
 
 .btnPopupRoue {
-    position: absolute;
-    right: 45%;
-    top: 213%;
       padding: 15px 30px;
   font-size: 18px;
   background: linear-gradient(135deg, #062343, #1e6ab3);
@@ -356,6 +353,11 @@ color: white;
 
 #tourner:hover {
   transform: scale(1.1);
+}
+
+.divBtnRoue {
+    text-align: center;
+    margin-bottom: 100px;
 }
 /* // FIN ROUE DE LA CHANCE // */
 /* // CSS FOOTER // */

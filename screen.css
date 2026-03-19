@@ -101,20 +101,6 @@
     text-align: start;
 }
 
-.btnPopupRoue {
-    position: absolute;
-    right: 12%;
-    top: 540%;
-    padding: 15px 30px;
-    font-size: 15px;
-    background: linear-gradient(135deg, #062343, #1e6ab3);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 5px;
-}
-
 #roue {
     width: 400px;
 }
