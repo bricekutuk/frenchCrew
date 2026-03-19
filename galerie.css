@@ -250,12 +250,8 @@ section{
     font-size: 30px;
     text-align: center;
     padding-left:0px;
-}
-    .cards{
-        display: flex;
-        flex-direction: column;
-        max-width: 500px;
-    }
+   }
+
     #nav{
         padding: 0;
            position: fixed;
@@ -312,17 +308,46 @@ body>*:not(#nav):not(footer){
 }
 
 .cards{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 1200px; 
+}
+
+.cards a{
+    grid-column: span 1 ;
+    grid-row: span 1 ;
 }
 
 .card{
-    height: 220px;
-    overflow: hidden;
+    width: 100%;   
+    aspect-ratio: 1 / 1;  
     border-radius: 12px;
+    overflow: hidden;
 }
 
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    object-position: center; 
+}
+.card10{
+    height: 100%;
+
+}
+.card11{
+    height: 100%;
+  
+}
+.card12{
+    height: 100%;
+    
+}
+section{
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 0 20px;
+}
 
 }
